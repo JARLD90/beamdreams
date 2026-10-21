@@ -11,10 +11,11 @@ Beta site for Beam Dreams. Static HTML, zero build, deployed by Cloudflare Pages
 ## One-time setup (owner)
 1. **GitHub**: create an empty repo `JARLD90/beamdreams`, then from this folder:
    `git remote add origin git@github.com:JARLD90/beamdreams.git && git push -u origin main`
-2. **Cloudflare Pages**: Workers & Pages → Create → Pages → Connect to Git → `beamdreams` →
-   Framework preset *None*, build command empty, output directory `/` → Deploy.
-   Then Custom domains → add `beamdreams.art` and `www.beamdreams.art` (DNS is created for you if the
-   domain is on Cloudflare). Pretty URLs (`/beta/start`) work out of the box.
+2. **Cloudflare**: deployed as a static-assets Worker (the current form of Pages) from this folder:
+   `wrangler deploy` (after `wrangler login`). `wrangler.jsonc` carries the custom domains
+   `beamdreams.art` + `www.beamdreams.art`; they attach once the zone's nameservers point at
+   Cloudflare (kenneth.ns.cloudflare.com, molly.ns.cloudflare.com). Live preview:
+   https://beamdreams.jamie-roderick.workers.dev
 3. **Formspree**: create three forms (Sign-ups, Feedback, Bug reports) and paste their IDs:
    - `beta/index.html` → `SIGNUP_FORM`
    - `beta/feedback.html` → form `action`
@@ -24,5 +25,5 @@ Beta site for Beam Dreams. Static HTML, zero build, deployed by Cloudflare Pages
    the page collects sign-ups and promises an invite.
 
 ## Release flow
-Bump `BETA_VERSION` in `beta/index.html`, add a section to `beta/changelog.html`, commit, push.
-Cloudflare deploys in ~1–2 minutes.
+Bump `BETA_VERSION` in `beta/index.html`, add a section to `beta/changelog.html`, commit, push,
+then `wrangler deploy` from this folder (live in seconds).

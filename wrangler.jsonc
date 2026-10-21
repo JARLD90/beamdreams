@@ -2,10 +2,10 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "beamdreams",
   "compatibility_date": "2026-10-19",
-  "observability": {
-    "enabled": true
-  },
-  "assets": {
-    "directory": "."
-  }
+  "observability": { "enabled": true },
+  "assets": { "directory": ".", "not_found_handling": "404-page" },
+  "routes": [
+    { "pattern": "beamdreams.art", "custom_domain": true },
+    { "pattern": "www.beamdreams.art", "custom_domain": true }
+  ]
 }
