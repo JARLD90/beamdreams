@@ -10,15 +10,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{--black:#141414;--purple:#7c3aed;--violet:#a78bfa;--blue:#2e8bff;--cyan:#00f5b8;--ink:#f7f6f3;--dim:#aeaeb2;--line:#2c2c2e;--panel:#1c1c1e}
+  :root{--black:#141414;--purple:#7c3aed;--violet:#a78bfa;--orange:#f5912b;--blue:#2e8bff;--cyan:#00f5b8;--edge:rgba(0,245,184,.45);--ink:#f7f6f3;--dim:#aeaeb2;--line:#2c2c2e;--panel:#1c1c1e}
   *{margin:0;padding:0;box-sizing:border-box}
   body{background:var(--black);color:var(--ink);min-height:100vh;font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased;display:flex;justify-content:center;padding:56px 24px}
   .card{max-width:680px;width:100%}
   .top{display:flex;align-items:center;gap:12px;margin-bottom:34px}
   .top img{width:46px;height:46px;border-radius:12px}
   .top a{margin-left:auto;font-family:'Spline Sans Mono',monospace;font-size:13px;color:var(--dim);text-decoration:none}
-  .top a:hover{color:var(--cyan)}
-  .eyebrow{font-family:'Spline Sans Mono',monospace;font-size:13px;letter-spacing:4px;color:var(--cyan);text-transform:uppercase;margin-bottom:14px}
+  .top a:hover{color:var(--blue)}
+  .eyebrow{font-family:'Spline Sans Mono',monospace;font-size:13px;letter-spacing:4px;color:var(--blue);text-transform:uppercase;margin-bottom:14px}
   h1{font-weight:900;font-size:clamp(32px,8vw,46px);line-height:1;letter-spacing:-1.2px;margin-bottom:14px}
   h2{font-weight:700;font-size:21px;letter-spacing:-.3px;margin:38px 0 14px;padding-top:28px;border-top:1px solid var(--line)}
   h2:first-of-type{border-top:none;padding-top:0}
@@ -29,15 +29,15 @@
   li{margin-bottom:8px}
   b,strong{color:var(--ink);font-weight:700}
   code{font-family:'Spline Sans Mono',monospace;font-size:13px;background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:2px 6px;color:var(--violet)}
-  .box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px 24px 22px;margin-top:14px}
-  .tag{display:inline-block;font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--blue);border:1px solid var(--line);border-radius:100px;padding:4px 12px;margin:22px 0 4px}
-  .tag.c{color:var(--cyan)} .tag.v{color:var(--violet)}
-  a.link{color:var(--blue);text-decoration:none} a.link:hover{text-decoration:underline}
+  .box{background:var(--panel);border:1px solid var(--edge);border-radius:12px;padding:6px 24px 22px;margin-top:14px}
+  .tag{display:inline-block;font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);border:1px solid var(--line);border-radius:100px;padding:4px 12px;margin:22px 0 4px}
+  .tag.c{color:var(--blue)} .tag.v{color:var(--violet)}
+  a.link{color:var(--orange);text-decoration:none} a.link:hover{text-decoration:underline}
   .rel{font-family:'Spline Sans Mono',monospace;font-size:13px;color:var(--dim);margin-bottom:34px;letter-spacing:.5px}
-  .rel b{color:var(--blue);font-weight:500}
-  .intro{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:14px 16px;font-size:14px;margin-bottom:8px}
+  .rel b{color:var(--orange);font-weight:500}
+  .intro{background:var(--panel);border:1px solid var(--edge);border-radius:9px;padding:14px 16px;font-size:14px;margin-bottom:8px}
   .foot{margin-top:40px;padding-top:24px;border-top:1px solid var(--line);font-family:'Spline Sans Mono',monospace;font-size:12px;color:var(--dim);letter-spacing:.5px;line-height:1.8}
-  .foot a{color:var(--blue);text-decoration:none}
+  .foot a{color:var(--orange);text-decoration:none}
 </style>
 </head>
 <body>

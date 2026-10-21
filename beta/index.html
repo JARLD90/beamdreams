@@ -18,7 +18,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --black:#141414;--purple:#7c3aed;--violet:#a78bfa;--blue:#2e8bff;--cyan:#00f5b8;
+    --black:#141414;--purple:#7c3aed;--violet:#a78bfa;--orange:#f5912b;--blue:#2e8bff;--cyan:#00f5b8;--edge:rgba(0,245,184,.45);
     --ink:#f7f6f3;--dim:#aeaeb2;--line:#2c2c2e;--panel:#1c1c1e;
   }
   *{margin:0;padding:0;box-sizing:border-box}
@@ -26,36 +26,36 @@
     display:flex;align-items:center;justify-content:center;text-align:center;padding:56px 24px;-webkit-font-smoothing:antialiased}
   .card{max-width:760px;width:100%}
   .logo{width:108px;height:108px;border-radius:24px;margin:0 auto 28px;display:block}
-  .eyebrow{font-family:'Spline Sans Mono',monospace;font-size:13px;letter-spacing:4px;color:var(--cyan);text-transform:uppercase;margin-bottom:16px}
-  .get{font-weight:700;font-size:clamp(20px,5vw,28px);color:var(--blue);letter-spacing:-.5px;margin-bottom:2px}
+  .eyebrow{font-family:'Spline Sans Mono',monospace;font-size:13px;letter-spacing:4px;color:var(--blue);text-transform:uppercase;margin-bottom:16px}
+  .get{font-weight:700;font-size:clamp(20px,5vw,28px);color:var(--orange);letter-spacing:-.5px;margin-bottom:2px}
   h1{font-weight:900;font-size:clamp(38px,10vw,60px);line-height:.98;letter-spacing:-1.5px;margin-bottom:18px;color:var(--violet)}
-  h1 .d{color:var(--blue)}
+  h1 .d{color:var(--orange)}
   .tagline{font-family:'Spline Sans Mono',monospace;margin:0 auto 20px;max-width:420px;line-height:1.5}
   .tag-lead{display:block;font-size:13px;color:var(--dim);letter-spacing:.5px;margin-bottom:6px;font-style:italic}
-  .tag-pay{display:block;font-size:15px;color:var(--cyan);letter-spacing:2px;text-transform:uppercase;font-weight:500}
+  .tag-pay{display:block;font-size:15px;color:var(--blue);letter-spacing:2px;text-transform:uppercase;font-weight:500}
   p.lede{font-size:17px;color:var(--dim);margin-bottom:34px;line-height:1.55}
   .btn{font-family:'Archivo';font-weight:700;font-size:16px;border:none;cursor:pointer;text-decoration:none;
     background:var(--purple);color:#fff;padding:16px 32px;border-radius:9px;transition:.18s;display:inline-block}
   .btn:hover{background:#8b5cf6;transform:translateY(-1px)}
   .btn.alt{background:var(--panel);color:var(--ink);border:1px solid var(--line)}
-  .btn.alt:hover{border-color:var(--blue);background:#222226}
+  .btn.alt:hover{border-color:var(--orange);background:#222226}
   .meta{font-family:'Spline Sans Mono',monospace;font-size:12px;color:var(--dim);margin-top:18px;letter-spacing:.5px;line-height:1.8}
-  .meta b{color:var(--blue);font-weight:500}
-  .meta a{color:var(--blue);text-decoration:none}
-  .meta a.c{color:var(--cyan)} .meta a.v{color:var(--violet)}
-  .shot{margin:44px auto 0;max-width:680px;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block;box-shadow:0 24px 60px rgba(0,0,0,.55)}
+  .meta b{color:var(--orange);font-weight:500}
+  .meta a{color:var(--orange);text-decoration:none}
+  .meta a.c{color:var(--blue)} .meta a.v{color:var(--violet)}
+  .shot{margin:44px auto 0;max-width:680px;width:100%;height:auto;border-radius:12px;border:1px solid var(--edge);display:block;box-shadow:0 24px 60px rgba(0,0,0,.55)}
   .rule{height:1px;background:var(--line);margin:44px auto 30px;max-width:340px}
   .note{font-family:'Spline Sans Mono',monospace;font-size:12px;color:var(--dim);margin-top:14px;letter-spacing:.5px;min-height:16px}
   .dlform{display:flex;flex-direction:column;gap:12px;max-width:380px;margin:0 auto}
   .dlform input,.dlform select{background:var(--panel);border:1px solid var(--line);color:var(--ink);font-family:'Archivo';font-size:15px;padding:15px 18px;border-radius:9px;text-align:center}
   .dlform select{text-align:center;appearance:none;-webkit-appearance:none}
-  .dlform input:focus,.dlform select:focus{outline:none;border-color:var(--cyan)}
+  .dlform input:focus,.dlform select:focus{outline:none;border-color:var(--blue)}
   .dlform .btn{width:100%}
   .btn:disabled{background:#2c2c2e;color:var(--dim);cursor:default;transform:none}
   .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:34px auto 0;max-width:680px;text-align:left}
-  .pillar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}
+  .pillar{background:var(--panel);border:1px solid var(--edge);border-radius:12px;padding:16px}
   .pillar h3{font-size:14px;font-weight:700;margin-bottom:6px}
-  .pillar h3.p{color:var(--violet)} .pillar h3.b{color:var(--blue)} .pillar h3.c{color:var(--cyan)}
+  .pillar h3.p{color:var(--violet)} .pillar h3.b{color:var(--orange)} .pillar h3.c{color:var(--blue)}
   .pillar p{font-size:13px;color:var(--dim);line-height:1.5}
   @media(prefers-reduced-motion:reduce){.btn:hover{transform:none}}
 </style>
@@ -93,7 +93,7 @@
         <div style="height:10px"></div>
         <a class="btn alt" id="opentf" href="#" target="_blank" rel="noopener">Get the iPhone app (TestFlight)</a>
       </div>
-      <p class="note" id="note2" style="color:var(--cyan)"></p>
+      <p class="note" id="note2" style="color:var(--blue)"></p>
       <p class="meta"><a class="c" href="/beta/about">About &rarr;</a> &nbsp;·&nbsp; <a href="/beta/start">Getting started &rarr;</a> &nbsp;·&nbsp; <a class="v" href="/beta/changelog">What's new &rarr;</a></p>
     </div>
 
