@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beam Dreams — What's New</title>
+<meta name="description" content="What's new in the Beam Dreams beta — release notes for every build.">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--black:#141414;--purple:#7c3aed;--violet:#a78bfa;--blue:#2e8bff;--cyan:#00f5b8;--ink:#f7f6f3;--dim:#aeaeb2;--line:#2c2c2e;--panel:#1c1c1e}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--black);color:var(--ink);min-height:100vh;font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased;display:flex;justify-content:center;padding:56px 24px}
+  .card{max-width:680px;width:100%}
+  .top{display:flex;align-items:center;gap:12px;margin-bottom:34px}
+  .top img{width:46px;height:46px;border-radius:12px}
+  .top a{margin-left:auto;font-family:'Spline Sans Mono',monospace;font-size:13px;color:var(--dim);text-decoration:none}
+  .top a:hover{color:var(--cyan)}
+  .eyebrow{font-family:'Spline Sans Mono',monospace;font-size:13px;letter-spacing:4px;color:var(--cyan);text-transform:uppercase;margin-bottom:14px}
+  h1{font-weight:900;font-size:clamp(32px,8vw,46px);line-height:1;letter-spacing:-1.2px;margin-bottom:14px}
+  h2{font-weight:700;font-size:21px;letter-spacing:-.3px;margin:38px 0 14px;padding-top:28px;border-top:1px solid var(--line)}
+  h2:first-of-type{border-top:none;padding-top:0}
+  h3{font-weight:700;font-size:16px;margin:22px 0 10px;color:var(--ink)}
+  p,li{font-size:15px;color:var(--dim);line-height:1.6}
+  p{margin-bottom:14px}
+  ul,ol{margin:0 0 14px 20px}
+  li{margin-bottom:8px}
+  b,strong{color:var(--ink);font-weight:700}
+  code{font-family:'Spline Sans Mono',monospace;font-size:13px;background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:2px 6px;color:var(--violet)}
+  .box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px 24px 22px;margin-top:14px}
+  .tag{display:inline-block;font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--blue);border:1px solid var(--line);border-radius:100px;padding:4px 12px;margin:22px 0 4px}
+  .tag.c{color:var(--cyan)} .tag.v{color:var(--violet)}
+  a.link{color:var(--blue);text-decoration:none} a.link:hover{text-decoration:underline}
+  .rel{font-family:'Spline Sans Mono',monospace;font-size:13px;color:var(--dim);margin-bottom:34px;letter-spacing:.5px}
+  .rel b{color:var(--blue);font-weight:500}
+  .intro{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:14px 16px;font-size:14px;margin-bottom:8px}
+  .foot{margin-top:40px;padding-top:24px;border-top:1px solid var(--line);font-family:'Spline Sans Mono',monospace;font-size:12px;color:var(--dim);letter-spacing:.5px;line-height:1.8}
+  .foot a{color:var(--blue);text-decoration:none}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="top">
+      <img src="logo.png" alt="Beam Dreams">
+      <a href="/beta/">&larr; Back</a>
+    </div>
+    <div class="eyebrow">Beta · What's new</div>
+    <h1>What&rsquo;s new.</h1>
+    <div class="rel">Current build <b>beta 0.1</b> — first tester build</div>
+
+    <p class="intro">This is the first build to leave the shop. Everything below is new. The web app and the iPhone app share one account; updates to the web app are live the moment they ship, and iPhone updates arrive through TestFlight.</p>
+
+    <h2>Beta 0.1</h2>
+    <ul>
+      <li><b>Inventory.</b> Laser models and units with FDA/IEC classes, accession and variance numbers, safety features, rentals, Laserworld/RTI blocking, and the control patch (FB4 serial or DMX/Art-Net universe + address).</li>
+      <li><b>Shows.</b> Dates, crew invites, effects catalog, placements with block reasons, zones with the separation rules, FAA site fields for outdoor shows, per-show time zone.</li>
+      <li><b>Past shows.</b> Quick add and CSV bulk import with a validation preview.</li>
+      <li><b>iPhone app.</b> Offline-first: shows, placements, zones and sign-offs, hashed photo evidence with laser snapshots, pre-show checklists with the Form 3636 roll-up, power readings, issues with safety lockout, deadlines with badge and push registration, and the calculator.</li>
+      <li><b>Deadlines.</b> Generated from show dates, state, city and setting, with working-day math and holidays; FAA exemption for fully terminated beams; registration prerequisites; annual report and variance renewal; maintenance tasks. Reminders in-app, by push and email, and an ICS calendar feed.</li>
+      <li><b>Annual report.</b> Form 3636 drafted from the period's shows, gaps listed, editable, PDF export, mark filed.</li>
+      <li><b>Paperwork engine.</b> Form 3147, Form 3640 and supplements, the CDRH cover sheet with its checklist, FAA 7140-1 with a Laser Configuration Worksheet per projector, state notices (TX, IL, AZ, NY), Form 3632, a per-show paperwork list and the on-site document pack.</li>
+      <li><b>Calculator.</b> NOHD, SZED, CZED and LFED from FAA AC 70-1B and ANSI Z136.1, unit-tested against the FAA's worked examples; saves to the placement and feeds the FAA worksheet.</li>
+      <li><b>Celebrations.</b> A little laser animation when a show is completed or a document is filed. Switch it off in Settings if it's not your thing.</li>
+    </ul>
+
+    <h2>Known limits in 0.1</h2>
+    <ul>
+      <li>The drawing generator (plan and elevation drawings from numbers) is not built yet: upload your own drawings for Form 3640 Part 9.</li>
+      <li>The calculator covers visible continuous-wave beams with apertures up to 1 cm. Pulsed, scanned-beam MPE cases and invisible wavelengths are flagged, not computed.</li>
+      <li>State rules beyond TX, IL, AZ and NY are listed but inactive until each is verified with the agency.</li>
+      <li>Adding placements and unlinking zones from lasers is web-only; the phone edits what's already there.</li>
+    </ul>
+
+    <p class="rel" style="margin-top:30px"><a class="link" href="/beta/start">Getting started &rarr;</a> &nbsp;·&nbsp; <a class="link" href="/beta/about">About &rarr;</a></p>
+    <div class="foot">Beam Dreams is not for operating lasers and is not legal advice: every rule shows its source and the date it was last verified. Questions &rarr; <a href="mailto:support@beamdreams.art">support@beamdreams.art</a> &nbsp;·&nbsp; <a href="/beta/report">Report a bug</a> &nbsp;·&nbsp; <a href="/beta/feedback">Send feedback</a></div>
+  </div>
+</body>
+</html>

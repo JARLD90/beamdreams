@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beam Dreams — Submit a Bug Report</title>
+<meta name="description" content="Submit a Beam Dreams beta bug report with screenshots.">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--black:#141414;--purple:#7c3aed;--violet:#a78bfa;--blue:#2e8bff;--cyan:#00f5b8;--ink:#f7f6f3;--dim:#aeaeb2;--line:#2c2c2e;--panel:#1c1c1e}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--black);color:var(--ink);min-height:100vh;font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased;display:flex;justify-content:center;padding:56px 24px}
+  .card{max-width:520px;width:100%}
+  .top{display:flex;align-items:center;gap:12px;margin-bottom:30px}
+  .top img{width:46px;height:46px;border-radius:12px}
+  .top a{margin-left:auto;font-family:'Spline Sans Mono',monospace;font-size:13px;color:var(--dim);text-decoration:none}
+  .top a:hover{color:var(--cyan)}
+  .eyebrow{font-family:'Spline Sans Mono',monospace;font-size:13px;letter-spacing:4px;text-transform:uppercase;margin-bottom:14px}
+  h1{font-weight:900;font-size:clamp(32px,8vw,46px);line-height:1;letter-spacing:-1.2px;margin-bottom:14px}
+  p.lede{font-size:16px;color:var(--dim);margin-bottom:30px;line-height:1.55}
+  label{display:block;font-family:'Spline Sans Mono',monospace;font-size:12px;letter-spacing:1px;color:var(--ink);text-transform:uppercase;margin:0 0 8px}
+  .field{margin-bottom:22px}
+  input,textarea,select{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--ink);font-family:'Archivo';font-size:15px;padding:13px 15px;border-radius:9px}
+  select{appearance:none;-webkit-appearance:none}
+  input:focus,textarea:focus,select:focus{outline:none;border-color:var(--cyan)}
+  textarea{resize:vertical;min-height:140px}
+  .btn{font-family:'Archivo';font-weight:700;font-size:16px;border:none;cursor:pointer;width:100%;background:var(--purple);color:#fff;padding:16px;border-radius:9px;transition:.18s;margin-top:4px}
+  .btn:hover{background:#8b5cf6}
+  .btn:disabled{opacity:.45;cursor:default}
+  .status{font-family:'Spline Sans Mono',monospace;font-size:13px;margin-top:16px;text-align:center;min-height:18px}
+  .drop{display:block;padding:44px 24px;border:1.5px dashed var(--line);border-radius:12px;text-align:center;color:var(--dim);cursor:pointer;transition:.18s;background:var(--panel)}
+  .drop:hover,.drop.over{border-color:var(--cyan);color:var(--ink)}
+  .drop .big{font-size:17px;color:var(--ink);font-weight:700;margin-bottom:6px}
+  .drop .sub{font-size:13px} .drop b{color:var(--cyan);font-weight:500} .drop input{display:none}
+  #fileList{margin-top:16px;text-align:left}
+  .item{font-family:'Spline Sans Mono',monospace;font-size:13px;color:var(--blue);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin-top:8px;display:flex;justify-content:space-between;align-items:center}
+  .item .x{color:var(--dim);cursor:pointer;font-size:16px;line-height:1} .item .x:hover{color:var(--violet)}
+  .small{font-family:'Spline Sans Mono',monospace;font-size:12px;color:var(--dim);text-align:center;margin-top:24px;letter-spacing:.5px}
+  .small a{text-decoration:none}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="top"><img src="logo.png" alt="Beam Dreams"><a href="/beta/">&larr; Back</a></div>
+    <div class="eyebrow" style="color:var(--violet)">Beta feedback</div>
+    <h1>Submit a bug report.</h1>
+    <p class="lede">Tell me what happened and where, drop in screenshots, and send. It comes straight to my inbox.</p>
+
+    <form id="bugForm" action="https://formspree.io/f/YOUR_BUG_FORM_ID" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="_next" value="https://beamdreams.art/beta/thanks">
+      <div class="field"><label for="email">Your email</label><input type="email" id="email" name="email" placeholder="you@lasercompany.com" required></div>
+      <div class="field"><label for="where">Where</label>
+        <select id="where" name="where" required>
+          <option value="">Pick one</option>
+          <option>Web app</option><option>iPhone app</option><option>Both / syncing between them</option><option>A form or PDF</option>
+        </select></div>
+      <div class="field"><label for="device">Device / browser</label><input type="text" id="device" name="device" placeholder="e.g. iPhone 15, iOS 26 · or Safari on Mac"></div>
+      <div class="field"><label for="what">What happened</label><textarea id="what" name="what" placeholder="What you did, what you expected, what you got instead. Show or laser names help." required></textarea></div>
+      <label class="drop" id="drop" for="files">
+        <div class="big">Drop screenshots here</div>
+        <div class="sub">or <b>tap to choose files</b> (optional)</div>
+        <input type="file" id="files" name="files" multiple>
+      </label>
+      <div id="fileList"></div>
+      <button type="submit" class="btn" id="submit" disabled>Send report</button>
+      <p class="status" id="status"></p>
+    </form>
+    <p class="small">Just a thought? <a href="/beta/feedback" style="color:var(--blue)">Send feedback &rarr;</a> &nbsp;·&nbsp; <a href="mailto:support@beamdreams.art" style="color:var(--blue)">support@beamdreams.art</a></p>
+  </div>
+<script>
+  var input=document.getElementById('files'),drop=document.getElementById('drop'),list=document.getElementById('fileList'),
+      btn=document.getElementById('submit'),status=document.getElementById('status'),form=document.getElementById('bugForm');
+  var store=new DataTransfer();
+  function syncBtn(){btn.disabled=!form.checkValidity();}
+  form.addEventListener('input',syncBtn);form.addEventListener('change',syncBtn);syncBtn();
+  function render(){
+    list.innerHTML='';
+    for(var i=0;i<store.files.length;i++){(function(f,idx){
+      var row=document.createElement('div');row.className='item';
+      var name=document.createElement('span');name.textContent=f.name;
+      var x=document.createElement('span');x.className='x';x.textContent='×';x.onclick=function(){remove(idx);};
+      row.appendChild(name);row.appendChild(x);list.appendChild(row);
+    })(store.files[i],i);}
+    input.files=store.files;syncBtn();
+  }
+  function add(fl){for(var i=0;i<fl.length;i++)store.items.add(fl[i]);render();}
+  function remove(idx){var dt=new DataTransfer();for(var i=0;i<store.files.length;i++)if(i!==idx)dt.items.add(store.files[i]);store=dt;render();}
+  input.addEventListener('change',function(){add(input.files);});
+  ['dragenter','dragover'].forEach(function(e){drop.addEventListener(e,function(ev){ev.preventDefault();drop.classList.add('over');});});
+  ['dragleave','drop'].forEach(function(e){drop.addEventListener(e,function(ev){ev.preventDefault();drop.classList.remove('over');});});
+  drop.addEventListener('drop',function(ev){if(ev.dataTransfer.files.length)add(ev.dataTransfer.files);});
+  form.addEventListener('submit',function(){btn.disabled=true;status.style.color='var(--dim)';status.textContent='Sending…';});
+</script>
+</body>
+</html>

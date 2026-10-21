@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beam Dreams — Getting Started</title>
+<meta name="description" content="Getting started with the Beam Dreams beta: sign in, set up your company and inventory, build a show, run the pre-show checklist on your iPhone, and draft your paperwork.">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--black:#141414;--purple:#7c3aed;--violet:#a78bfa;--blue:#2e8bff;--cyan:#00f5b8;--ink:#f7f6f3;--dim:#aeaeb2;--line:#2c2c2e;--panel:#1c1c1e}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--black);color:var(--ink);min-height:100vh;font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased;display:flex;justify-content:center;padding:56px 24px}
+  .card{max-width:680px;width:100%}
+  .top{display:flex;align-items:center;gap:12px;margin-bottom:34px}
+  .top img{width:46px;height:46px;border-radius:12px}
+  .top a{margin-left:auto;font-family:'Spline Sans Mono',monospace;font-size:13px;color:var(--dim);text-decoration:none}
+  .top a:hover{color:var(--cyan)}
+  .eyebrow{font-family:'Spline Sans Mono',monospace;font-size:13px;letter-spacing:4px;color:var(--cyan);text-transform:uppercase;margin-bottom:14px}
+  h1{font-weight:900;font-size:clamp(32px,8vw,46px);line-height:1;letter-spacing:-1.2px;margin-bottom:14px}
+  h2{font-weight:700;font-size:21px;letter-spacing:-.3px;margin:38px 0 14px;padding-top:28px;border-top:1px solid var(--line)}
+  h2:first-of-type{border-top:none;padding-top:0}
+  h3{font-weight:700;font-size:16px;margin:22px 0 10px;color:var(--ink)}
+  p,li{font-size:15px;color:var(--dim);line-height:1.6}
+  p{margin-bottom:14px}
+  ul,ol{margin:0 0 14px 20px}
+  li{margin-bottom:8px}
+  b,strong{color:var(--ink);font-weight:700}
+  code{font-family:'Spline Sans Mono',monospace;font-size:13px;background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:2px 6px;color:var(--violet)}
+  .box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px 24px 22px;margin-top:14px}
+  .tag{display:inline-block;font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--blue);border:1px solid var(--line);border-radius:100px;padding:4px 12px;margin:22px 0 4px}
+  .tag.c{color:var(--cyan)} .tag.v{color:var(--violet)}
+  a.link{color:var(--blue);text-decoration:none} a.link:hover{text-decoration:underline}
+  .rel{font-family:'Spline Sans Mono',monospace;font-size:13px;color:var(--dim);margin-bottom:34px;letter-spacing:.5px}
+  .rel b{color:var(--blue);font-weight:500}
+  .intro{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:14px 16px;font-size:14px;margin-bottom:8px}
+  .foot{margin-top:40px;padding-top:24px;border-top:1px solid var(--line);font-family:'Spline Sans Mono',monospace;font-size:12px;color:var(--dim);letter-spacing:.5px;line-height:1.8}
+  .foot a{color:var(--blue);text-decoration:none}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="top">
+      <img src="logo.png" alt="Beam Dreams">
+      <a href="/beta/">&larr; Back</a>
+    </div>
+    <div class="eyebrow">Beta · Getting started</div>
+    <h1>Getting started.</h1>
+    <p>Welcome to the Beam Dreams beta. The web app is for desk work: inventory, shows, paperwork. The iPhone app is for the field: placements, zone photos, checklists, issues. They share one account and one set of data.</p>
+
+    <h2>1. Sign in and set up your company</h2>
+    <ul>
+      <li>Open the web app, create an account, and create your <b>company</b> — the FDA variance holder. You become its first admin.</li>
+      <li>In <b>Settings</b>, fill in the company's street address, phone, email and responsible person: these go on every FDA form, and the drafts will flag anything missing.</li>
+      <li>Invite your team from Settings › Members. Admins manage inventory and filings; safety officers sign; operators work the show.</li>
+    </ul>
+
+    <h2>2. Inventory</h2>
+    <ul>
+      <li>Add a <b>laser model</b> first (make, model, class, wavelengths, power per color, divergence, beam diameter, scan-fail details, accession number), then add each <b>unit</b> by serial number. Units inherit the model; override only what's different.</li>
+      <li>Set the control patch on each unit: <b>FB4</b> with its serial, or <b>DMX / Art-Net</b> with universe and start address. You can override it per show later.</li>
+      <li>Rented or borrowed units go in the same place, flagged as rentals with the dates and the owner's variance.</li>
+    </ul>
+
+    <h2>3. Build a show</h2>
+    <ul>
+      <li>Create the show with its venue, state and indoor/outdoor setting, then add <b>dates</b>. The alignment date matters most: deadlines count from the first date a beam is on.</li>
+      <li>Assign the <b>safety officer</b>. Only that person can sign zone checks and the pre-show checklist.</li>
+      <li>Place lasers, add zones, and pick effects. Blocked lasers (locked out, retired, or an unreported Laserworld/RTI unit) can't be placed, and the reason is shown.</li>
+      <li>Outdoor show? Answer whether every beam terminates on a solid surface, and enter the site coordinates — the FAA notice depends on it.</li>
+      <li>The <b>Deadlines</b> page now lists everything the show needs, by agency, with the rule's source and a verify link.</li>
+    </ul>
+
+    <h2>4. On site, with the iPhone app</h2>
+    <ul>
+      <li>Install the app and sign in with the same account. Pull down to sync. Everything you've opened stays available with no signal.</li>
+      <li>Open the show, adjust a placement's IP, patch, position or aim, and photograph zones <b>before and after</b>. Each photo is hashed and stamped the moment you take it.</li>
+      <li>Start the <b>pre-show checklist</b> for the performance date: equipment checks per projector (with label photos), alignment checks, zone measurements, effect measurements, then the safety officer signs.</li>
+      <li>Something wrong with a laser? <b>Report an issue</b>. A safety-severity issue locks the laser out of shows until it's cleared.</li>
+      <li>Changes upload when you're back online. Account › Sync shows what's queued.</li>
+    </ul>
+
+    <h2>5. Paperwork</h2>
+    <ul>
+      <li>Fill in <b>Paperwork › Compliance profile</b> once: venue types, tour length, audience scanning, operator control, and the variance conditions. Forms 3147 and 3640 read from it.</li>
+      <li>From the show page, draft each required notice (FAA 7140-1, state notices, permits). Fix the listed gaps, edit anything you need to, export the PDF, file it, and mark it filed — the deadline closes itself.</li>
+      <li>Run the <b>calculator</b> from a placement before drafting the FAA worksheet; it needs the NOHD and zone distances.</li>
+      <li>After June 30, draft the <b>annual report</b> (Form 3636); it's built from every show in the period, including ones you added after the fact.</li>
+    </ul>
+
+    <h2>Adding past shows</h2>
+    <p><b>Past shows</b> takes shows the app wasn't used for: a quick form with only the annual-report fields, or a CSV upload checked row by row. They count fully toward the report and the five-year record.</p>
+
+    <div class="box">
+      <div class="tag c">Beta notes</div>
+      <ul>
+        <li>Drafts are drafting aids. File the official form; the app tracks the status.</li>
+        <li>Rules marked "not verified" never produce a due date. Confirm them with the agency and tell me what you learn.</li>
+        <li>Push notifications need the TestFlight build on a real iPhone; the simulator can't receive them.</li>
+      </ul>
+    </div>
+
+    <p class="rel" style="margin-top:30px"><a class="link" href="/beta/about">About Beam Dreams &rarr;</a> &nbsp;·&nbsp; <a class="link" href="/beta/changelog">What's new &rarr;</a></p>
+    <div class="foot">Beam Dreams is not for operating lasers and is not legal advice: every rule shows its source and the date it was last verified. Questions &rarr; <a href="mailto:support@beamdreams.art">support@beamdreams.art</a> &nbsp;·&nbsp; <a href="/beta/report">Report a bug</a> &nbsp;·&nbsp; <a href="/beta/feedback">Send feedback</a></div>
+  </div>
+</body>
+</html>

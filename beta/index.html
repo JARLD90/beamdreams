@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beam Dreams — You're Invited</title>
+<link rel="icon" type="image/png" href="/favicon.png">
+<meta name="description" content="Beam Dreams — compliance software for laser show designers and technicians. Inventory, shows, pre-show checklists, photo evidence, deadlines, and the FDA, FAA and state paperwork, on the web and on your iPhone.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Beam Dreams">
+<meta property="og:title" content="Beam Dreams — laser show compliance, done right">
+<meta property="og:description" content="Inventory, shows, checklists, photo evidence, deadlines and the FDA, FAA and state paperwork for laser show companies.">
+<meta property="og:image" content="https://beamdreams.art/beta/screenshot.jpg">
+<meta property="og:url" content="https://beamdreams.art/beta/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#141414;--purple:#7c3aed;--violet:#a78bfa;--blue:#2e8bff;--cyan:#00f5b8;
+    --ink:#f7f6f3;--dim:#aeaeb2;--line:#2c2c2e;--panel:#1c1c1e;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--black);color:var(--ink);min-height:100vh;font-family:'Archivo',sans-serif;
+    display:flex;align-items:center;justify-content:center;text-align:center;padding:56px 24px;-webkit-font-smoothing:antialiased}
+  .card{max-width:760px;width:100%}
+  .logo{width:108px;height:108px;border-radius:24px;margin:0 auto 28px;display:block}
+  .eyebrow{font-family:'Spline Sans Mono',monospace;font-size:13px;letter-spacing:4px;color:var(--cyan);text-transform:uppercase;margin-bottom:16px}
+  .get{font-weight:700;font-size:clamp(20px,5vw,28px);color:var(--blue);letter-spacing:-.5px;margin-bottom:2px}
+  h1{font-weight:900;font-size:clamp(38px,10vw,60px);line-height:.98;letter-spacing:-1.5px;margin-bottom:18px;color:var(--violet)}
+  h1 .d{color:var(--blue)}
+  .tagline{font-family:'Spline Sans Mono',monospace;margin:0 auto 20px;max-width:420px;line-height:1.5}
+  .tag-lead{display:block;font-size:13px;color:var(--dim);letter-spacing:.5px;margin-bottom:6px;font-style:italic}
+  .tag-pay{display:block;font-size:15px;color:var(--cyan);letter-spacing:2px;text-transform:uppercase;font-weight:500}
+  p.lede{font-size:17px;color:var(--dim);margin-bottom:34px;line-height:1.55}
+  .btn{font-family:'Archivo';font-weight:700;font-size:16px;border:none;cursor:pointer;text-decoration:none;
+    background:var(--purple);color:#fff;padding:16px 32px;border-radius:9px;transition:.18s;display:inline-block}
+  .btn:hover{background:#8b5cf6;transform:translateY(-1px)}
+  .btn.alt{background:var(--panel);color:var(--ink);border:1px solid var(--line)}
+  .btn.alt:hover{border-color:var(--blue);background:#222226}
+  .meta{font-family:'Spline Sans Mono',monospace;font-size:12px;color:var(--dim);margin-top:18px;letter-spacing:.5px;line-height:1.8}
+  .meta b{color:var(--blue);font-weight:500}
+  .meta a{color:var(--blue);text-decoration:none}
+  .meta a.c{color:var(--cyan)} .meta a.v{color:var(--violet)}
+  .shot{margin:44px auto 0;max-width:680px;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block;box-shadow:0 24px 60px rgba(0,0,0,.55)}
+  .rule{height:1px;background:var(--line);margin:44px auto 30px;max-width:340px}
+  .note{font-family:'Spline Sans Mono',monospace;font-size:12px;color:var(--dim);margin-top:14px;letter-spacing:.5px;min-height:16px}
+  .dlform{display:flex;flex-direction:column;gap:12px;max-width:380px;margin:0 auto}
+  .dlform input,.dlform select{background:var(--panel);border:1px solid var(--line);color:var(--ink);font-family:'Archivo';font-size:15px;padding:15px 18px;border-radius:9px;text-align:center}
+  .dlform select{text-align:center;appearance:none;-webkit-appearance:none}
+  .dlform input:focus,.dlform select:focus{outline:none;border-color:var(--cyan)}
+  .dlform .btn{width:100%}
+  .btn:disabled{background:#2c2c2e;color:var(--dim);cursor:default;transform:none}
+  .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:34px auto 0;max-width:680px;text-align:left}
+  .pillar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}
+  .pillar h3{font-size:14px;font-weight:700;margin-bottom:6px}
+  .pillar h3.p{color:var(--violet)} .pillar h3.b{color:var(--blue)} .pillar h3.c{color:var(--cyan)}
+  .pillar p{font-size:13px;color:var(--dim);line-height:1.5}
+  @media(prefers-reduced-motion:reduce){.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+  <div class="card">
+    <img class="logo" src="logo.png" alt="Beam Dreams app icon">
+    <div class="eyebrow">You're invited</div>
+    <div class="get">Help Test</div>
+    <h1>BEAM <span class="d">DREAMS</span></h1>
+    <p class="lede">Compliance software for laser show designers and technicians. The paperwork, the deadlines, the evidence — handled, so you can focus on the show.</p>
+
+    <div id="gate">
+      <p class="tagline"><span class="tag-lead">The variance, the notices, the annual report...</span><span class="tag-pay">Never miss a deadline again</span></p>
+      <div class="dlform">
+        <input type="email" id="email" placeholder="you@lasercompany.com" aria-label="Email address">
+        <select id="role" aria-label="What do you do">
+          <option value="">What do you do?</option>
+          <option>Laser show company owner / variance holder</option>
+          <option>Laser safety officer</option>
+          <option>Operator / tech</option>
+          <option>Designer</option>
+          <option>Venue or client</option>
+          <option>Something else</option>
+        </select>
+        <button class="btn" id="getbtn" onclick="gate()" disabled>Join the beta</button>
+      </div>
+      <p class="meta">Web app · <b>iPhone app</b> · Fully offline in the field &nbsp;·&nbsp; <a class="c" href="/beta/about">About &rarr;</a> &nbsp;·&nbsp; <a href="/beta/start">Getting started &rarr;</a> &nbsp;·&nbsp; <a class="v" href="/beta/changelog">What's new &rarr;</a></p>
+      <p class="note" id="note"></p>
+    </div>
+
+    <div id="reveal" style="display:none">
+      <div id="live" style="display:none">
+        <a class="btn" id="openweb" href="#" target="_blank" rel="noopener">Open the web app</a>
+        <div style="height:10px"></div>
+        <a class="btn alt" id="opentf" href="#" target="_blank" rel="noopener">Get the iPhone app (TestFlight)</a>
+      </div>
+      <p class="note" id="note2" style="color:var(--cyan)"></p>
+      <p class="meta"><a class="c" href="/beta/about">About &rarr;</a> &nbsp;·&nbsp; <a href="/beta/start">Getting started &rarr;</a> &nbsp;·&nbsp; <a class="v" href="/beta/changelog">What's new &rarr;</a></p>
+    </div>
+
+    <img class="shot" src="screenshot.jpg" width="1440" height="726" loading="lazy" alt="Beam Dreams deadlines page showing an overdue permit in red and upcoming FAA and Texas notices">
+
+    <div class="pillars">
+      <div class="pillar"><h3 class="p">Paperwork that writes itself</h3><p>Form 3147, 3640, the annual 3636, FAA 7140-1 and state notices drafted from your inventory and shows — with the gaps listed before you file.</p></div>
+      <div class="pillar"><h3 class="b">Deadlines you can't miss</h3><p>Counted from the first beam-on date, by state and setting, with working days and holidays. Reminders on your phone, by email and in your calendar.</p></div>
+      <div class="pillar"><h3 class="c">Evidence that holds up</h3><p>Zone photos hashed at capture with GPS, time, device and the laser's serial, FB4 and IP. Checklists signed by the safety officer.</p></div>
+    </div>
+
+    <div class="rule"></div>
+
+    <p class="meta">Already testing? <a class="v" href="/beta/report">Report a bug &rarr;</a> &nbsp;·&nbsp; <a href="/beta/feedback">Send feedback &rarr;</a></p>
+    <p class="meta" style="margin-top:10px">Questions? <a href="mailto:support@beamdreams.art">support@beamdreams.art</a></p>
+    <p class="meta" style="margin-top:14px;font-size:11px">Beam Dreams is not for operating lasers and is not legal advice. Every rule shows its source and the date it was last verified.</p>
+  </div>
+
+<script>
+  // ---- Configure these three things ----
+  // 1) Formspree form for beta sign-ups (separate from bug/feedback). Create at formspree.io and paste the ID.
+  var SIGNUP_FORM = "https://formspree.io/f/YOUR_SIGNUP_FORM_ID";
+  // 2) Where the beta lives. Leave empty until the hosted web app / TestFlight build is live:
+  //    the page then collects sign-ups and promises an invite instead of showing buttons.
+  var APP_URL = "";          // e.g. "https://app.beamdreams.art"
+  var TESTFLIGHT_URL = "";   // e.g. "https://testflight.apple.com/join/XXXXXXXX"
+  // 3) Beta version tag — bump each release so sign-ups are labeled with the build in Formspree.
+  var BETA_VERSION = "0.1";
+
+  function validEmail(v){return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v.trim());}
+  var emailInput=document.getElementById('email'),getBtn=document.getElementById('getbtn');
+  emailInput.addEventListener('input',function(){getBtn.disabled=!validEmail(emailInput.value);});
+
+  function gate(){
+    var e=document.getElementById('email'),n=document.getElementById('note'),v=e.value.trim(),role=document.getElementById('role').value;
+    if(!validEmail(v)){n.innerHTML="That doesn't look like an email — check it and try again.";n.style.color="var(--violet)";e.focus();return;}
+    if(SIGNUP_FORM.indexOf("YOUR_SIGNUP_FORM_ID")===-1){
+      try{
+        fetch(SIGNUP_FORM,{method:"POST",keepalive:true,headers:{'Accept':'application/json','Content-Type':'application/json'},
+          body:JSON.stringify({email:v,role:role,source:"beta signup v"+BETA_VERSION,version:BETA_VERSION,_subject:"New Beam Dreams beta sign-up — v"+BETA_VERSION})});
+      }catch(err){}
+    }
+    reveal(v);
+  }
+  function reveal(v){
+    var live=APP_URL||TESTFLIGHT_URL,note2=document.getElementById('note2');
+    if(live){
+      document.getElementById('live').style.display='block';
+      var w=document.getElementById('openweb'),t=document.getElementById('opentf');
+      if(APP_URL){w.href=APP_URL;}else{w.style.display='none';}
+      if(TESTFLIGHT_URL){t.href=TESTFLIGHT_URL;}else{t.style.display='none';}
+      note2.innerHTML="You're in — thanks! Sign up in the web app with <b>"+v.replace(/</g,'&lt;')+"</b>, then install the iPhone app and sign in with the same account.";
+    }else{
+      note2.innerHTML="You're on the list — thanks! Invites go out as the hosted beta opens; you'll get an email with your sign-in link.";
+    }
+    document.getElementById('gate').style.display="none";
+    document.getElementById('reveal').style.display="block";
+  }
+  document.getElementById('email').addEventListener('keydown',function(ev){if(ev.key==='Enter'&&validEmail(this.value))gate();});
+</script>
+</body>
+</html>
